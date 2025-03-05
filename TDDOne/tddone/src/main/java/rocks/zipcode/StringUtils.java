@@ -14,19 +14,27 @@ public class StringUtils {
     // TODO: Implement the following methods to make the tests pass
     
     public static String reverse(String str) {
-        // Your implementation here
-        return null;
+        String r = "";
+        for (int i = str.length() - 1; i >= 0; i--) {
+            r = r + str.charAt(i);
+        }
+        return r;
     }
     
     public static int countOccurrences(String str, char c) {
         // Your implementation here
-        return 0;
+        int x = 0;
+        for (int i=0; i < str.length(); i++)
+            if (str.charAt(i) == c) {
+                x++;
+            }
+        return x;
     }
     
     public static boolean isPalindrome(String str) {
         // Your implementation here
         // Note: Ignoring case and non-alphanumeric characters
-        return false;
+        return str.equals(reverse(str));
     }
 }
 
