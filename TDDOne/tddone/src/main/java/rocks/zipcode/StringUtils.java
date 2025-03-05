@@ -34,7 +34,17 @@ public class StringUtils {
     public static boolean isPalindrome(String str) {
         // Your implementation here
         // Note: Ignoring case and non-alphanumeric characters
-        return str.equals(reverse(str));
+        String cleanstr = str.replaceAll("[^a-zA-Z0-9]", "");
+        String cleanerstr = cleanstr.replaceAll(" ", "");
+
+        //Once removed things can run below.
+            if (cleanerstr.equals(new StringBuilder(cleanerstr).reverse()).toString()){
+                return false;
+            }
+        else{
+                return true;
+            }
+        }
     }
 }
 
