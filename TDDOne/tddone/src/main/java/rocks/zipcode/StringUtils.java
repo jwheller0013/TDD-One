@@ -37,14 +37,13 @@ public class StringUtils {
         String cleanstr = str.replaceAll("[^a-zA-Z0-9]", "");
         String cleanerstr = cleanstr.replaceAll(" ", "");
 
+        StringBuilder rev = new StringBuilder(cleanerstr).reverse();
+
         //Once removed things can run below.
-            if (cleanerstr.equals(new StringBuilder(cleanerstr).reverse()).toString()){
-                return false;
-            }
-        else{
-                return true;
-            }
-        }
+            return (cleanerstr.equals(rev));
+
+            //not working unsure why
+
     }
 }
 
