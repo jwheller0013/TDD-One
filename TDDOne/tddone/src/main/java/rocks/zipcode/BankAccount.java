@@ -25,24 +25,37 @@ public class BankAccount {
     
     public String getAccountNumber() {
         // Your implementation here
-        return null;
+        return this.accountNumber;
     }
     
     public String getOwnerName() {
         // Your implementation here
-        return null;
+        return this.ownerName;
     }
     
     public double getBalance() {
         // Your implementation here
-        return 0.0;
+        return this.balance;
     }
     
     public void deposit(double amount) {
         // Your implementation here
+        if (amount > 0) {
+            this.balance = balance + amount;
+        }
+        else {
+            System.out.println("Deposit amount must be positive");
+        }
+
     }
     
     public void withdraw(double amount) {
         // Your implementation here
+        if (amount <= balance && amount > 0) {
+            this.balance = balance - amount;
+        }
+        else {
+            System.out.println("Insufficient funds");;
+        }
     }
 }
