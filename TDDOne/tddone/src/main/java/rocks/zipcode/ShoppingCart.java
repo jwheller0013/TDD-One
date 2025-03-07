@@ -52,15 +52,15 @@ public class ShoppingCart {
     public double getTaxAmount() {
         return getSubtotal() * taxRate;
     }
-    //test
+
     public double getTotal() {
         return getSubtotal() + getTaxAmount();
     }
-    //test
+
     public void clearCart() {
         items.clear();
     }
-    //test
+
     public static class Item {
         private final String name;
         private final double price;

@@ -52,6 +52,19 @@ class ShoppingCartTest {
         assertEquals(2.50, shoppingCart.getTaxAmount());
     }
 
+    @Test
+    void testGetTotal () {
+        shoppingCart.addItem(newItem);
+        assertEquals(7.50, shoppingCart.getTotal());
+    }
+
+    @Test
+    void testClearCart () {
+        shoppingCart.addItem(newItem);
+        shoppingCart.clearCart();
+        assertEquals(0, shoppingCart.getItemCount());
+    }
+
 
     // Make sure to test all functionality including:
     // - Adding and removing items
