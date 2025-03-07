@@ -28,11 +28,17 @@ public class Calculator {
     
     public double divide(int a, int b) {
         // Your implementation here
+        if (b == 0) {
+            throw new ArithmeticException("Cannot divide by zero");
+        }
         return (double) a / (double) b;
     }
     
     public double power(int base, int exponent) {
         // Your implementation here
+//        double a = (double) base;
+//        double b = (double) exponent;
+//        return (a^b);
         return 0.0;
     }
 }
