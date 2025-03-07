@@ -65,6 +65,22 @@ class ShoppingCartTest {
         assertEquals(0, shoppingCart.getItemCount());
     }
 
+    @Test
+    void testGetItemName () {
+        assertEquals("apple", newItem.getName());
+    }
+
+    @Test
+    void testGetPrice () {
+        assertEquals(5, newItem.getPrice());
+    }
+
+    @Test
+    void testQuantity () {
+        assertEquals(1, newItem.getQuantity());
+    }
+
+
 
     // Make sure to test all functionality including:
     // - Adding and removing items
