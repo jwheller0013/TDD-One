@@ -18,7 +18,7 @@ class ShoppingCartTest {
 
     @BeforeEach
     void setUp() {
-        double taxRate = 1.0;
+        double taxRate = 0.5;
         this.shoppingCart = new ShoppingCart(taxRate);
     }
 
@@ -38,6 +38,18 @@ class ShoppingCartTest {
     void testGetItemCount () {
         shoppingCart.addItem(newItem);
         assertEquals(1, shoppingCart.getItemCount());
+    }
+
+    @Test
+    void testGetSubTotal () {
+        shoppingCart.addItem(newItem);
+        assertEquals(5, shoppingCart.getSubtotal());
+    }
+
+    @Test
+    void testGetTaxAmmount () {
+        shoppingCart.addItem(newItem);
+        assertEquals(2.50, shoppingCart.getTaxAmount());
     }
 
 

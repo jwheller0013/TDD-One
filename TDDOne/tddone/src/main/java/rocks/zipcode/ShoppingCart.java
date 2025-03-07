@@ -40,7 +40,7 @@ public class ShoppingCart {
     public int getItemCount() {
         return items.size();
     }
-    //test
+
     public double getSubtotal() {
         double subtotal = 0.0;
         for (Item item : items) {
@@ -48,7 +48,7 @@ public class ShoppingCart {
         }
         return subtotal;
     }
-    //test
+
     public double getTaxAmount() {
         return getSubtotal() * taxRate;
     }
