@@ -36,10 +36,10 @@ public class Calculator {
     
     public double power(int base, int exponent) {
         // Your implementation here
-//        double a = (double) base;
-//        double b = (double) exponent;
-//        return (a^b);
-        return 0.0;
+        double x = (double) base;
+        double y = (double) exponent;
+        return Math.pow(x,y);
+//        return 0.0;
     }
 }
 
