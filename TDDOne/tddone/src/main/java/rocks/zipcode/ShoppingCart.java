@@ -18,19 +18,29 @@ public class ShoppingCart {
         this.items = new ArrayList<>();
         this.taxRate = taxRate;
     }
-    
+
+
     public void addItem(Item item) {
         items.add(item);
+    }
+
+    // Item new Item = new Item(....);
+    // sc.addItem(newItem);
+    // Item expected = s.getItem(sc.getItemCount() -1);
+    // assertequal (expected, newItem);
+
+    public  Item getItem (int idx) {
+        return items.get(idx);
     }
     
     public void removeItem(Item item) {
         items.remove(item);
     }
-    
+
     public int getItemCount() {
         return items.size();
     }
-    
+    //test
     public double getSubtotal() {
         double subtotal = 0.0;
         for (Item item : items) {
@@ -38,19 +48,19 @@ public class ShoppingCart {
         }
         return subtotal;
     }
-    
+    //test
     public double getTaxAmount() {
         return getSubtotal() * taxRate;
     }
-    
+    //test
     public double getTotal() {
         return getSubtotal() + getTaxAmount();
     }
-    
+    //test
     public void clearCart() {
         items.clear();
     }
-    
+    //test
     public static class Item {
         private final String name;
         private final double price;
