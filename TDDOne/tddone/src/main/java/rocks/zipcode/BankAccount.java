@@ -43,19 +43,21 @@ public class BankAccount {
         if (amount > 0) {
             this.balance = balance + amount;
         }
-        else {
-            System.out.println("Deposit amount must be positive");
+        if (amount < 0) {
+            throw new IllegalArgumentException("Deposit amount must be positive");
         }
 
     }
     
     public void withdraw(double amount) {
         // Your implementation here
-        if (amount <= balance && amount > 0) {
+        if (amount > balance) {
+            throw new IllegalStateException("Insufficient funds");
+        }
+        if (amount < 0) {
+            throw new IllegalArgumentException("Withdrawal amount must be positive");
+        }
+
             this.balance = balance - amount;
-        }
-        else {
-            System.out.println("Insufficient funds");;
-        }
     }
 }
